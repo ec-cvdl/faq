@@ -1,0 +1,505 @@
+{
+  "org": {
+    "name": "Mon espace",
+    "phone": ""
+  },
+  "accent": "#00ACB0",
+  "bg": "#EEF2F5",
+  "textSize": "normal",
+  "trackingSnippet": "",
+  "portalName": "Assistance informatique",
+  "portalTagline": "Comment pouvons-nous vous aider ?",
+  "portalIntro": "Choisissez la situation qui ressemble le plus à la vôtre. Chaque parcours vous guide pas à pas.",
+  "mode": "A",
+  "trees": [
+    {
+      "id": "ytsc869",
+      "title": "Pas de connexion Internet",
+      "description": "Vérifier la box, le réseau et le mot de passe, étape par étape.",
+      "icon": "wifi",
+      "color": "#00ACB0",
+      "tint": "#DFF3F3",
+      "startId": "k7mosj5",
+      "nodes": {
+        "k7mosj5": {
+          "title": "Le voyant Wi-Fi de la box est-il allumé ?",
+          "name": "",
+          "text": "Regardez à l’avant de la box Internet : voyant vert ou bleu, en forme d’ondes.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "xo6qy2f",
+              "label": "Oui, il est allumé"
+            },
+            {
+              "target": "aa59bqj",
+              "label": "Non, rien ne s’allume"
+            }
+          ]
+        },
+        "xo6qy2f": {
+          "title": "Vérifiez que le Wi-Fi est activé sur l’appareil",
+          "name": "",
+          "text": "Ouvrez les réglages réseau et assurez-vous que le Wi-Fi n’est pas coupé (mode avion, interrupteur physique...).",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "ms10rwv",
+              "label": "C’est activé, mais toujours rien"
+            }
+          ]
+        },
+        "aa59bqj": {
+          "title": "Rebranchez l’alimentation de la box",
+          "name": "",
+          "text": "Débranchez le câble d’alimentation, attendez dix secondes, puis rebranchez-le fermement.",
+          "quote": "Patientez ensuite deux minutes que la box redémarre complètement.",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "kiqv3a4",
+              "label": "Ça remarche !"
+            },
+            {
+              "target": "b3usxkc",
+              "label": "Toujours rien après 2 minutes"
+            }
+          ]
+        },
+        "ms10rwv": {
+          "title": "Voyez-vous le réseau Wi-Fi dans la liste des réseaux disponibles ?",
+          "name": "",
+          "text": "Ouvrez les réglages Wi-Fi de votre ordinateur ou de votre téléphone.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "qjei7yj",
+              "label": "Oui, je le vois"
+            },
+            {
+              "target": "b3usxkc",
+              "label": "Non, aucun réseau visible"
+            }
+          ]
+        },
+        "qjei7yj": {
+          "title": "Saisissez le mot de passe Wi-Fi",
+          "name": "",
+          "text": "Le mot de passe est généralement inscrit sur une étiquette collée sous ou derrière la box.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "kiqv3a4",
+              "label": "Connexion réussie"
+            },
+            {
+              "target": "b3usxkc",
+              "label": "Le mot de passe est refusé"
+            }
+          ]
+        },
+        "kiqv3a4": {
+          "title": "Connexion rétablie",
+          "name": "",
+          "text": "La connexion Internet devrait maintenant fonctionner normalement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": true,
+          "options": []
+        },
+        "b3usxkc": {
+          "title": "Besoin d’un technicien",
+          "name": "",
+          "text": "Ce problème nécessite une intervention plus poussée. Un technicien peut vous aider directement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": true,
+          "done": true,
+          "options": []
+        }
+      }
+    },
+    {
+      "id": "16yuy5v",
+      "title": "Imprimante qui ne répond pas",
+      "description": "Diagnostiquer une imprimante qui n’imprime plus.",
+      "icon": "print",
+      "color": "#B58200",
+      "tint": "#FEF3D5",
+      "startId": "gh7vmn1",
+      "nodes": {
+        "gh7vmn1": {
+          "title": "L’imprimante est-elle allumée avec un voyant vert fixe ?",
+          "name": "",
+          "text": "Regardez l’écran ou le voyant d’état sur l’imprimante.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "wcf6uza",
+              "label": "Oui, tout est vert"
+            },
+            {
+              "target": "z11fxf7",
+              "label": "Non, voyant orange, rouge ou éteint"
+            }
+          ]
+        },
+        "wcf6uza": {
+          "title": "Vérifiez la connexion USB ou Wi-Fi",
+          "name": "",
+          "text": "Assurez-vous que le câble USB est bien branché, ou que l’imprimante est sur le même réseau Wi-Fi que votre ordinateur.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "19b9f4a",
+              "label": "C’est bien connecté"
+            }
+          ]
+        },
+        "z11fxf7": {
+          "title": "Vérifiez le bac à papier et les cartouches",
+          "name": "",
+          "text": "Ouvrez le capot : contrôlez qu’il y a du papier, que les cartouches sont bien enclenchées et qu’aucun bourrage n’est visible.",
+          "quote": "Un voyant orange clignotant signale le plus souvent un bourrage papier ou un niveau d’encre bas.",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "19b9f4a",
+              "label": "C’est résolu"
+            },
+            {
+              "target": "53k6tl3",
+              "label": "Le problème persiste"
+            }
+          ]
+        },
+        "19b9f4a": {
+          "title": "Relancez une impression test",
+          "name": "",
+          "text": "Imprimez une page de test depuis les réglages de votre ordinateur ou de votre téléphone.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "yt3euta",
+              "label": "L’impression fonctionne"
+            },
+            {
+              "target": "53k6tl3",
+              "label": "Toujours aucune impression"
+            }
+          ]
+        },
+        "yt3euta": {
+          "title": "Imprimante opérationnelle",
+          "name": "",
+          "text": "Votre imprimante fonctionne à nouveau normalement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": true,
+          "options": []
+        },
+        "53k6tl3": {
+          "title": "Besoin d’un technicien",
+          "name": "",
+          "text": "Ce problème nécessite une intervention plus poussée. Un technicien peut vous aider directement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": true,
+          "done": true,
+          "options": []
+        }
+      }
+    },
+    {
+      "id": "1omq9xv",
+      "title": "Mot de passe oublié",
+      "description": "Retrouver l’accès à sa session ou à un compte en ligne.",
+      "icon": "lock",
+      "color": "#E62460",
+      "tint": "#FDE4EB",
+      "startId": "f2n6ns0",
+      "nodes": {
+        "f2n6ns0": {
+          "title": "S’agit-il du mot de passe de votre ordinateur, ou d’un site / application ?",
+          "name": "",
+          "text": "Précisez d’abord de quel mot de passe il s’agit : ça change la marche à suivre.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "2y8f8j3",
+              "label": "Ma session d’ordinateur"
+            },
+            {
+              "target": "hb2wtih",
+              "label": "Un site ou une application"
+            }
+          ]
+        },
+        "2y8f8j3": {
+          "title": "Utilisez un compte administrateur pour le réinitialiser",
+          "name": "",
+          "text": "Connectez-vous avec un autre compte administrateur, puis allez dans les réglages de comptes pour réinitialiser le mot de passe.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "59qnedr",
+              "label": "C’est réinitialisé"
+            },
+            {
+              "target": "fpczw9u",
+              "label": "Je n’ai pas de compte administrateur"
+            }
+          ]
+        },
+        "hb2wtih": {
+          "title": "Utilisez le lien « mot de passe oublié » du site",
+          "name": "",
+          "text": "Sur la page de connexion, cliquez sur « mot de passe oublié » et suivez les instructions reçues par e-mail.",
+          "quote": "Pensez à vérifier vos courriers indésirables si l’e-mail n’arrive pas tout de suite.",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "59qnedr",
+              "label": "J’ai réinitialisé"
+            },
+            {
+              "target": "fpczw9u",
+              "label": "Je ne reçois aucun e-mail"
+            }
+          ]
+        },
+        "59qnedr": {
+          "title": "Mot de passe réinitialisé",
+          "name": "",
+          "text": "Vous pouvez maintenant vous reconnecter avec votre nouveau mot de passe.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": true,
+          "options": []
+        },
+        "fpczw9u": {
+          "title": "Besoin d’un technicien",
+          "name": "",
+          "text": "Ce problème nécessite une intervention plus poussée. Un technicien peut vous aider directement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": true,
+          "done": true,
+          "options": []
+        }
+      }
+    },
+    {
+      "id": "37ljp9u",
+      "title": "Écran noir après une mise à jour",
+      "description": "Retrouver un affichage normal après une mise à jour système.",
+      "icon": "screen",
+      "color": "#002743",
+      "tint": "#DCE6EE",
+      "startId": "9l4zmi1",
+      "nodes": {
+        "9l4zmi1": {
+          "title": "L’écran est-il resté noir plus de cinq minutes ?",
+          "name": "",
+          "text": "Un écran noir juste après une mise à jour peut simplement prendre un peu de temps à revenir.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "fjy7d2v",
+              "label": "Oui, ça fait plus de cinq minutes"
+            },
+            {
+              "target": "soxm8l9",
+              "label": "Non, ça vient de se produire"
+            }
+          ]
+        },
+        "fjy7d2v": {
+          "title": "Forcez le redémarrage de l’ordinateur",
+          "name": "",
+          "text": "Maintenez le bouton d’allumage enfoncé quelques secondes jusqu’à ce que l’ordinateur s’éteigne, puis rallumez-le normalement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "nhwyiky",
+              "label": "L’écran est revenu"
+            },
+            {
+              "target": "otgswxt",
+              "label": "Toujours noir"
+            }
+          ]
+        },
+        "soxm8l9": {
+          "title": "Patientez encore quelques minutes",
+          "name": "",
+          "text": "Évitez d’éteindre l’ordinateur pendant ce temps : la mise à jour se termine peut-être en arrière-plan.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "nhwyiky",
+              "label": "L’écran est revenu"
+            },
+            {
+              "target": "otgswxt",
+              "label": "Toujours noir après l’attente"
+            }
+          ]
+        },
+        "nhwyiky": {
+          "title": "Affichage rétabli",
+          "name": "",
+          "text": "L’écran fonctionne à nouveau normalement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": true,
+          "options": []
+        },
+        "otgswxt": {
+          "title": "Besoin d’un technicien",
+          "name": "",
+          "text": "Ce problème nécessite une intervention plus poussée. Un technicien peut vous aider directement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": true,
+          "done": true,
+          "options": []
+        }
+      }
+    },
+    {
+      "id": "fpbvbbk",
+      "title": "Le son ne fonctionne plus",
+      "description": "Retrouver le son sur un ordinateur qui n’émet plus aucun bruit.",
+      "icon": "sound",
+      "color": "#B58200",
+      "tint": "#FEF3D5",
+      "startId": "adevbaa",
+      "nodes": {
+        "adevbaa": {
+          "title": "Le volume est-il bien monté et non coupé ?",
+          "name": "",
+          "text": "Regardez l’icône de son en bas de l’écran : vérifiez qu’elle n’est pas barrée et que le curseur n’est pas au minimum.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "perm6ju",
+              "label": "C’était ça, ça fonctionne"
+            },
+            {
+              "target": "eftp9g7",
+              "label": "Le volume était déjà correct"
+            }
+          ]
+        },
+        "eftp9g7": {
+          "title": "Vérifiez les enceintes ou le casque",
+          "name": "",
+          "text": "Assurez-vous que le câble est bien branché, ou que le casque/l’enceinte Bluetooth est bien connecté et allumé.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "perm6ju",
+              "label": "C’est réglé"
+            },
+            {
+              "target": "ilw30a3",
+              "label": "Toujours aucun son"
+            }
+          ]
+        },
+        "ilw30a3": {
+          "title": "Redémarrez l’ordinateur",
+          "name": "",
+          "text": "Un simple redémarrage résout souvent ce type de problème.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": false,
+          "options": [
+            {
+              "target": "perm6ju",
+              "label": "Le son est revenu"
+            },
+            {
+              "target": "37g1b8r",
+              "label": "Toujours aucun son"
+            }
+          ]
+        },
+        "perm6ju": {
+          "title": "Son rétabli",
+          "name": "",
+          "text": "Le son fonctionne à nouveau normalement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": false,
+          "done": true,
+          "options": []
+        },
+        "37g1b8r": {
+          "title": "Besoin d’un technicien",
+          "name": "",
+          "text": "Ce problème nécessite une intervention plus poussée. Un technicien peut vous aider directement.",
+          "quote": "",
+          "media": null,
+          "showCallButton": true,
+          "done": true,
+          "options": []
+        }
+      }
+    }
+  ]
+}
