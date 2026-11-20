@@ -1,8 +1,8 @@
 # Dépannage informatique
 
 Petit site statique d'aide au dépannage d'ordinateurs : la personne choisit son problème,
-répond à quelques questions, suit les conseils. Si ce n'est pas réglé, le site l'oriente vers le
-SAV Emmaüs Connect de sa région. Aucun serveur, aucune base, aucune donnée envoyée.
+répond à quelques questions, suit les conseils. C'est une FAQ : elle aide à se dépanner seul et
+dit quand une réparation est nécessaire. Aucun serveur, aucune base, aucune donnée envoyée.
 
 Les parcours viennent de l'outil de dépannage de La Distrib (Emmaüs Connect).
 
@@ -10,10 +10,12 @@ Les parcours viennent de l'outil de dépannage de La Distrib (Emmaüs Connect).
 
 | Fichier | Rôle |
 | --- | --- |
-| `index.html`, `app.js`, `style.css` | le site |
+| `index.html`, `app.js`, `site.css` | le site |
+| `design/` | design de La Distrib (styles, illustrations, logo), recopié tel quel |
 | `arbres.json` | les parcours (format `cvdl-depannage`) |
-| `config.json` | titre, texte d'accueil, contacts SAV par région, contact de repli |
+| `config.json` | titre de l'onglet, texte d'accueil, logo |
 | `outils/convertir.js` | met à jour `arbres.json` depuis un export La Distrib |
+| `outils/importer-design.js` | met à jour `design/` depuis le dépôt front de La Distrib |
 
 ## Héberger
 
@@ -23,29 +25,13 @@ N'importe quel hébergement de fichiers statiques : GitHub Pages (Settings → P
 En local : `python3 -m http.server 8000` puis http://localhost:8000 (ouvrir `index.html`
 directement ne marche pas : le navigateur bloque la lecture des `.json`).
 
-Chaque problème a son lien direct : `…/#internet`, `…/#charge`, `…/#contact`.
+Chaque problème a son lien direct : `…/#internet`, `…/#charge`.
 
-## Renseigner les contacts SAV
+## Réglages (`config.json`)
 
-Dans `config.json`, une entrée par région :
-
-```json
-{
-  "region": "Île-de-France",
-  "nom": "SAV Emmaüs Connect Paris",
-  "adresse": "…",
-  "telephone": "01 23 45 67 89",
-  "email": "sav@…",
-  "site": "https://…",
-  "horaires": "Lun–ven, 9 h–17 h"
-}
-```
-
-Champs vides = non affichés. Sans région choisie ou pour « Autre », le texte et le lien de
-`repli` s'affichent. La région choisie est retenue dans le navigateur.
-
-`batterieSemaines` : délai de prise en charge de la batterie après la remise (0 pour ne pas
-l'afficher).
+- `titre` : titre de l'onglet du navigateur ;
+- `sousTitre` : texte sous « Quel problème rencontrez-vous ? » (vide = masqué) ;
+- `logo` : `false` pour masquer le logo.
 
 ## Mettre à jour les parcours
 
@@ -53,8 +39,23 @@ l'afficher).
    publique `depannage-arbres` de l'API.
 2. `node outils/convertir.js export.json arbres.json`
 
-Le script ne garde que les parcours publiés et remplace « déclarer un SAV » par « contacter le
-SAV ». Il signale les tournures à relire.
+Le script ne garde que les parcours publiés et remplace les renvois vers le SAV de La Distrib par
+des conseils généraux (« une réparation est nécessaire », « faites-vous aider par un
+réparateur »…). Il liste les phrases qui parlent encore de SAV : à ajouter dans ses
+`REMPLACEMENTS`.
+
+## Mettre à jour le design
+
+Le rendu est celui de La Distrib : `design/` contient ses feuilles de style, ses illustrations et
+le moteur qui les dessine. Ne rien modifier dans `design/` ; après un changement de design dans
+La Distrib :
+
+```
+node outils/importer-design.js ../La-Distrib-CVL-Front
+```
+
+Les polices Inter et Space Grotesk viennent de Google Fonts (appelé par `cvdl-ui.css`). Mettre
+`"logo": false` dans `config.json` pour masquer le logo.
 
 ## Format d'un parcours
 
@@ -76,5 +77,5 @@ SAV ». Il signale les tournures à relire.
 }
 ```
 
-`fin` : `""` (question), `resolu`, `sav` (contacter le SAV) ou `hors` (hors garantie, avec
+`fin` : `""` (question), `resolu`, `sav` (réparation nécessaire) ou `hors` (hors garantie, avec
 `motif` : chute, liquide, batterie, virus, mises-a-jour, application).

@@ -161,15 +161,15 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
           "reponses": []
         },
         "sav": {
-          "titre": "Il faut l’équipe SAV",
-          "texte": "Les vérifications simples n’ont pas suffi : l’ordinateur doit être examiné.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "titre": "Une réparation est nécessaire",
+          "texte": "Les vérifications simples n’ont pas suffi : l’ordinateur doit être examiné.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -177,7 +177,7 @@
         },
         "sav_alim": {
           "titre": "Problème d’alimentation",
-          "texte": "L’ordinateur ne reçoit pas de courant ou ne démarre pas : chargeur, batterie ou carte électronique sont à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "L’ordinateur ne reçoit pas de courant ou ne démarre pas : chargeur, batterie ou carte électronique sont à vérifier.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -185,7 +185,7 @@
         },
         "sav_ecran": {
           "titre": "Problème d’écran",
-          "texte": "L’ordinateur fonctionne mais son écran n’affiche pas correctement l’image : l’écran ou son éclairage est à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "L’ordinateur fonctionne mais son écran n’affiche pas correctement l’image : l’écran ou son éclairage est à vérifier.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -193,7 +193,7 @@
         },
         "sav_systeme": {
           "titre": "Le système ne démarre plus correctement",
-          "texte": "N’essayez pas de réinitialiser ou de réinstaller le système vous-même : vous pourriez perdre vos documents. L’équipe s’en occupe.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "N’essayez pas de réinitialiser ou de réinstaller le système vous-même : vous pourriez perdre vos documents. Confiez-le à un réparateur.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -407,7 +407,7 @@
         },
         "gonfle": {
           "titre": "Batterie gonflée : arrêtez de l’utiliser",
-          "texte": "Une batterie gonflée peut prendre feu. Éteignez l’ordinateur, débranchez-le, ne le rechargez plus, ne le laissez pas sur un lit ou un canapé, n’appuyez pas dessus et n’essayez pas de l’ouvrir.\n\nContactez le SAV pour savoir comment le déposer ou l’envoyer en sécurité.",
+          "texte": "Une batterie gonflée peut prendre feu. Éteignez l’ordinateur, débranchez-le, ne le rechargez plus, ne le laissez pas sur un lit ou un canapé, n’appuyez pas dessus et n’essayez pas de l’ouvrir.\n\nFaites remplacer la batterie par un réparateur.",
           "astuce": "",
           "media": null,
           "fin": "hors",
@@ -423,8 +423,8 @@
           "reponses": []
         },
         "sav": {
-          "titre": "Il faut l’équipe SAV",
-          "texte": "Le problème vient du chargeur, du port de charge ou du circuit de charge : un diagnostic est nécessaire.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "titre": "Une réparation est nécessaire",
+          "texte": "Le problème vient du chargeur, du port de charge ou du circuit de charge : un diagnostic est nécessaire.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -432,7 +432,7 @@
         },
         "sav_chargeur": {
           "titre": "Chargeur à remplacer",
-          "texte": "Le chargeur ou son câble est défectueux. Précisez « chargeur » au SAV.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "Le chargeur ou son câble est défectueux. Remplacez-le par un chargeur compatible avec votre ordinateur.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -667,7 +667,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -675,7 +675,7 @@
         },
         "sav": {
           "titre": "Clavier à vérifier",
-          "texte": "Le clavier intégré ou son branchement interne est probablement en cause.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "Le clavier intégré ou son branchement interne est probablement en cause.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -855,7 +855,7 @@
         },
         "souris_hs": {
           "titre": "La souris est en panne",
-          "texte": "Une souris qui ne marche sur aucun ordinateur est elle-même défectueuse. Si elle a été fournie avec l’ordinateur, contactez le SAV.",
+          "texte": "Une souris qui ne marche sur aucun ordinateur est elle-même défectueuse. Remplacez-la : n’importe quelle souris USB fait l’affaire.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -863,7 +863,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -871,7 +871,7 @@
         },
         "sav": {
           "titre": "Pavé tactile ou ports USB à vérifier",
-          "texte": "Le pavé tactile ou les ports USB de l’ordinateur sont à examiner.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "Le pavé tactile ou les ports USB de l’ordinateur sont à examiner.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -1025,7 +1025,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -1033,15 +1033,15 @@
         },
         "sav_hp": {
           "titre": "Haut-parleurs à vérifier",
-          "texte": "Le son fonctionne au casque : ce sont les haut-parleurs de l’ordinateur qui sont en cause.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "Le son fonctionne au casque : ce sont les haut-parleurs de l’ordinateur qui sont en cause.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
           "reponses": []
         },
         "sav": {
-          "titre": "Il faut l’équipe SAV",
-          "texte": "La carte son ou ses réglages sont à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "titre": "Une réparation est nécessaire",
+          "texte": "La carte son ou ses réglages sont à vérifier.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -1238,7 +1238,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -1246,7 +1246,7 @@
         },
         "sav": {
           "titre": "Connexion de l’ordinateur à vérifier",
-          "texte": "Les autres appareils ont Internet mais pas l’ordinateur : son Wi-Fi est à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "Les autres appareils ont Internet mais pas l’ordinateur : son Wi-Fi est à vérifier.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -1537,7 +1537,7 @@
         },
         "hors": {
           "titre": "Mise à jour bloquée",
-          "texte": "Notez le message d’erreur exact (ou prenez-le en photo) : il sera utile si vous contactez le SAV. N’éteignez jamais l’ordinateur pendant une mise à jour.",
+          "texte": "Notez le message d’erreur exact (ou prenez-le en photo) : il vous aidera à chercher une solution ou à vous faire aider. N’éteignez jamais l’ordinateur pendant une mise à jour.",
           "astuce": "",
           "media": null,
           "fin": "hors",
@@ -1672,7 +1672,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -1680,7 +1680,7 @@
         },
         "sav": {
           "titre": "Lenteur à diagnostiquer",
-          "texte": "L’ordinateur reste lent après ces vérifications : le disque ou un autre composant est peut-être en cause.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "L’ordinateur reste lent après ces vérifications : le disque ou un autre composant est peut-être en cause.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -1776,7 +1776,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -1784,7 +1784,7 @@
         },
         "sav": {
           "titre": "Ordinateur à examiner",
-          "texte": "La ventilation ou un composant est à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "La ventilation ou un composant est à vérifier.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -1834,7 +1834,7 @@
         },
         "reception": {
           "titre": "Écran abîmé à la réception",
-          "texte": "Contactez le SAV rapidement en précisant que l’écran était cassé dès la réception, avec une photo si possible.",
+          "texte": "Signalez-le rapidement à la personne ou à la structure qui vous a remis l’ordinateur, avec une photo si possible.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -1842,7 +1842,7 @@
         },
         "lignes": {
           "titre": "Lignes ou taches sans choc",
-          "texte": "Si vous êtes sûr qu’il n’y a eu ni chute ni pression, contactez le SAV en décrivant ce qui s’affiche (une photo aide beaucoup).",
+          "texte": "Si vous êtes sûr qu’il n’y a eu ni chute ni pression, faites-le examiner par un réparateur en décrivant ce qui s’affiche (une photo aide beaucoup).",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -1903,7 +1903,7 @@
         },
         "site": {
           "titre": "Mot de passe d’un site",
-          "texte": "Sur la page de connexion du site, utilisez le lien « Mot de passe oublié ? » : un lien de réinitialisation vous est envoyé par e-mail ou SMS. Le SAV n’a pas accès à vos comptes en ligne.",
+          "texte": "Sur la page de connexion du site, utilisez le lien « Mot de passe oublié ? » : un lien de réinitialisation vous est envoyé par e-mail ou SMS. Seul le site concerné peut vous rendre l’accès à votre compte.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -1987,7 +1987,7 @@
         },
         "l": {
           "titre": "Vérifications sous Linux Mint",
-          "texte": "Essayez d’abord le mot de passe « emmaus » (tout en minuscules, sans accent) : c’est souvent celui des ordinateurs reconditionnés par Emmaüs Connect.\nVérifiez aussi la touche Verr. Maj (majuscules) et la langue du clavier, puis retapez le mot de passe lentement.\nSous Linux Mint, un mot de passe oublié ne se réinitialise pas sans manipulation technique : ne tentez rien d’autre, l’équipe s’en charge.",
+          "texte": "Essayez d’abord le mot de passe « emmaus » (tout en minuscules, sans accent) : c’est souvent celui des ordinateurs reconditionnés par Emmaüs Connect.\nVérifiez aussi la touche Verr. Maj (majuscules) et la langue du clavier, puis retapez le mot de passe lentement.\nSous Linux Mint, un mot de passe oublié ne se réinitialise pas sans manipulation technique : ne tentez rien d’autre, faites-vous aider par un réparateur.",
           "astuce": "",
           "media": null,
           "fin": "",
@@ -2004,15 +2004,15 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
           "reponses": []
         },
         "sav": {
-          "titre": "L’équipe vous aide à retrouver l’accès",
-          "texte": "Préparez une pièce justifiant que l’ordinateur vous a bien été remis : l’équipe pourra vous la demander.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "titre": "Faites-vous aider pour retrouver l’accès",
+          "texte": "Préparez une preuve que l’ordinateur vous appartient (facture, attestation) : on pourra vous la demander.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -2165,7 +2165,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -2173,7 +2173,7 @@
         },
         "sav": {
           "titre": "Caméra ou micro à vérifier",
-          "texte": "Le matériel ou son branchement interne est probablement en cause.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "Le matériel ou son branchement interne est probablement en cause.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -2277,7 +2277,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -2285,7 +2285,7 @@
         },
         "sav": {
           "titre": "Port à vérifier",
-          "texte": "Le port de l’ordinateur ne fonctionne plus et doit être examiné.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "Le port de l’ordinateur ne fonctionne plus et doit être examiné.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -2393,7 +2393,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -2580,7 +2580,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -2588,7 +2588,7 @@
         },
         "sav": {
           "titre": "Impression à vérifier",
-          "texte": "L’imprimante fonctionne avec d’autres appareils mais pas avec cet ordinateur.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "L’imprimante fonctionne avec d’autres appareils mais pas avec cet ordinateur.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",
@@ -2675,7 +2675,7 @@
         },
         "ok": {
           "titre": "Problème réglé",
-          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours.",
           "astuce": "",
           "media": null,
           "fin": "resolu",
@@ -2683,7 +2683,7 @@
         },
         "sav": {
           "titre": "Décrivez la panne",
-          "texte": "Décrivez précisément ce qui se passe et depuis quand : un message d’erreur ou une photo aident beaucoup.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "texte": "Décrivez précisément ce qui se passe et depuis quand : un message d’erreur ou une photo aident beaucoup.\n\nIndiquez au réparateur ce que vous avez déjà essayé : il gagnera du temps.",
           "astuce": "",
           "media": null,
           "fin": "sav",

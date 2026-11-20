@@ -1,0 +1,6 @@
+/* Compléments propres au site autonome (le reste vient de design/, importé de La Distrib). */
+[hidden] { display: none !important; }
+.site-sous-titre { opacity: 0.6; margin: 0 0 var(--space-5); }
+.site-sous-titre:empty { display: none; }
+.site-grille { padding: var(--space-8) var(--space-6); margin-bottom: var(--space-4); }
+a.carte-symptome { color: inherit; text-decoration: none; }

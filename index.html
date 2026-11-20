@@ -3,40 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self'; script-src 'self'; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'">
   <title>Dépannage informatique</title>
-  <link rel="stylesheet" href="style.css?v=1">
+  <link rel="stylesheet" href="design/cvdl-ui.css?v=1">
+  <link rel="stylesheet" href="design/depannage.css?v=1">
+  <link rel="stylesheet" href="site.css?v=1">
+  <script src="design/illustrations.js?v=1"></script>
+  <script src="design/illustrations-moteur.js?v=1"></script>
 </head>
-<body>
-  <main class="page">
-    <header class="entete">
-      <h1 id="titre">Dépannage informatique</h1>
-      <p id="sous-titre"></p>
-    </header>
+<body data-famille="sav">
+<header class="cvdl-entete"><a class="cvdl-marque" href="#" aria-label="Retour à l’accueil"><img src="design/logo.png" alt="Emmaüs Connect" class="logo-portail" id="logo"></a></header>
+<main id="contenu-principal">
 
-    <section id="accueil" aria-labelledby="t-symptomes">
-      <h2 id="t-symptomes" class="titre-section">Quel est le problème ?</h2>
-      <label class="recherche">
-        <span class="sr">Rechercher un problème</span>
-        <input id="filtre" type="search" placeholder="Rechercher : écran, wifi, batterie…" autocomplete="off">
-      </label>
-      <div id="liste" class="liste" role="list"></div>
-      <p class="aucun" id="aucun" hidden>Aucun problème ne correspond. Essayez « Autre problème ».</p>
-    </section>
+  <!-- Accueil : choix du problème -->
+  <section class="etape" id="accueil">
+    <div class="etape-carte">
+      <div class="cvdl-titre"><span data-ill="panne" class="pk-titre-ill xl"></span><div class="cvdl-titre-txt"><div class="cvdl-surtitre">Dépannage</div><h1 id="titre">Quel <em>problème</em> rencontrez-vous ?</h1><p class="site-sous-titre" id="sous-titre"></p></div></div>
+      <div class="card elev-lg site-grille">
+        <div class="grille-symptomes" id="liste"></div>
+      </div>
+    </div>
+  </section>
 
-    <section id="parcours" class="dp-zone" hidden aria-live="polite"></section>
+  <!-- Parcours de dépannage -->
+  <section class="etape dp-zone" id="parcours" hidden>
+    <div class="etape-carte">
+      <div class="dp-intro"><span data-ill="aide" class="ill s"></span><span><b>Essayons ensemble.</b> Quelques vérifications rapides règlent souvent le problème — pas besoin d’être un expert.</span></div>
+      <div id="zone-depannage"></div>
+    </div>
+  </section>
 
-    <section id="contact" class="contact" hidden aria-labelledby="t-contact">
-      <h2 id="t-contact" class="titre-section">Contacter le SAV Emmaüs Connect de votre région</h2>
-      <label class="choix-region">
-        <span>Votre région</span>
-        <select id="region"></select>
-      </label>
-      <div id="fiche"></div>
-      <p class="rappel" id="rappel"></p>
-      <button type="button" class="btn btn-secondaire" id="retour-accueil">← Revenir à la liste des problèmes</button>
-    </section>
-  </main>
-  <script src="app.js?v=1"></script>
+</main>
+<script src="app.js?v=3"></script>
 </body>
 </html>
