@@ -1,0 +1,21 @@
+{
+  "titre": "Dépannage informatique",
+  "sousTitre": "Votre ordinateur fait des siennes ? Suivez les étapes : la plupart des petits problèmes se règlent en quelques minutes.",
+  "batterieSemaines": 4,
+  "contacts": [
+    {
+      "region": "Exemple — à remplacer",
+      "nom": "SAV Emmaüs Connect (exemple)",
+      "adresse": "",
+      "telephone": "",
+      "email": "",
+      "site": "",
+      "horaires": ""
+    }
+  ],
+  "repli": {
+    "texte": "Rapprochez-vous de l’antenne Emmaüs Connect la plus proche de chez vous, ou de la structure qui vous a remis l’ordinateur.",
+    "lien": "https://emmaus-connect.org",
+    "libelleLien": "Trouver Emmaüs Connect"
+  }
+}

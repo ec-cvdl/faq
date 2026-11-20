@@ -1,0 +1,2698 @@
+{
+  "format": "cvdl-depannage",
+  "version": 2,
+  "cree_le": "2026-11-02",
+  "arbres": [
+    {
+      "identifiant": "ecran-allumage",
+      "titre": "L’ordinateur ou l’écran ne s’allume plus",
+      "description": "Vérifications simples avant un diagnostic : alimentation, veille, luminosité, écran externe.",
+      "statut": "publie",
+      "symptomes": [
+        "L'écran ne s'allume plus",
+        "Ne s'allume plus du tout"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "secteur",
+        "forcer",
+        "noir",
+        "externe",
+        "redemarrer",
+        "boucle",
+        "ok",
+        "sav",
+        "sav_alim",
+        "sav_ecran",
+        "sav_systeme"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Que se passe-t-il quand vous appuyez sur le bouton d’alimentation ?",
+          "texte": "Appuyez une fois, brièvement, sur le bouton d’alimentation et observez l’ordinateur pendant quelques secondes.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Rien du tout : aucun voyant, aucun bruit",
+              "cible": "secteur"
+            },
+            {
+              "libelle": "Des voyants s’allument ou le ventilateur tourne, mais l’écran reste noir",
+              "cible": "noir"
+            },
+            {
+              "libelle": "L’écran s’allume puis s’éteint, ou l’ordinateur redémarre en boucle",
+              "cible": "boucle"
+            }
+          ]
+        },
+        "secteur": {
+          "titre": "Branchez-le sur le secteur",
+          "texte": "1. Branchez le chargeur sur une prise murale qui fonctionne (testez-la avec une lampe), pas sur une multiprise.\n2. Vérifiez que le câble est bien enfoncé des deux côtés, y compris dans le bloc du chargeur.\n3. Laissez charger 30 minutes : une batterie complètement vide ne permet pas de démarrer tout de suite.\n4. Appuyez ensuite sur le bouton d’alimentation.",
+          "astuce": "Si le câble est abîmé (fil visible, embout tordu) ou chauffe fortement, débranchez-le et n’insistez pas : risque d’incendie.",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Il démarre",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien, même branché",
+              "cible": "forcer"
+            }
+          ]
+        },
+        "forcer": {
+          "titre": "Arrêt complet puis redémarrage",
+          "texte": "Chargeur débranché, maintenez le bouton d’alimentation enfoncé 15 secondes, puis relâchez. Rebranchez le chargeur, attendez une minute, puis appuyez une fois sur le bouton d’alimentation.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Il démarre",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "sav_alim"
+            }
+          ]
+        },
+        "noir": {
+          "titre": "Réveiller l’écran",
+          "texte": "1. Appuyez sur une touche du clavier ou bougez la souris : l’ordinateur était peut-être en veille.\n2. Augmentez la luminosité avec la touche de luminosité (soleil), parfois avec la touche Fn.\n3. Éclairez l’écran avec une lampe de poche de près : si vous devinez l’image, c’est l’éclairage de l’écran qui est en cause.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "L’image est revenue",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Je devine une image très sombre",
+              "cible": "sav_ecran"
+            },
+            {
+              "libelle": "Toujours noir",
+              "cible": "externe"
+            }
+          ]
+        },
+        "externe": {
+          "titre": "Tester avec un autre écran (si vous en avez un)",
+          "texte": "Si vous avez un téléviseur ou un écran avec une prise HDMI et un câble HDMI, branchez l’ordinateur dessus. Sous Windows, appuyez ensuite sur la touche Windows + P et choisissez « Dupliquer ».\nSans écran ni câble, passez directement à l’étape suivante.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "L’image s’affiche sur l’autre écran",
+              "cible": "sav_ecran"
+            },
+            {
+              "libelle": "Rien non plus, ou pas d’autre écran",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "redemarrer": {
+          "titre": "Arrêt forcé",
+          "texte": "Maintenez le bouton d’alimentation enfoncé 15 secondes pour éteindre complètement l’ordinateur, attendez quelques secondes, puis rallumez-le.",
+          "astuce": "Un arrêt forcé ne doit servir qu’en dernier recours : les documents non enregistrés sont perdus.",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "L’écran fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours noir",
+              "cible": "sav"
+            }
+          ]
+        },
+        "boucle": {
+          "titre": "L’ordinateur s’éteint ou redémarre tout seul",
+          "texte": "1. Branchez le chargeur sur une prise murale : une batterie trop faible peut provoquer des arrêts.\n2. Débranchez tout ce qui est relié en USB (clé, disque, imprimante, souris), puis rallumez.\n3. Posez l’ordinateur sur une table dure, aérations dégagées : il s’éteint aussi pour se protéger s’il chauffe trop.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Il démarre normalement",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Il redémarre toujours en boucle",
+              "cible": "sav"
+            },
+            {
+              "libelle": "Un message bleu ou noir parle de réparation ou de récupération",
+              "cible": "sav_systeme"
+            }
+          ]
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Il faut l’équipe SAV",
+          "texte": "Les vérifications simples n’ont pas suffi : l’ordinateur doit être examiné.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        },
+        "sav_alim": {
+          "titre": "Problème d’alimentation",
+          "texte": "L’ordinateur ne reçoit pas de courant ou ne démarre pas : chargeur, batterie ou carte électronique sont à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        },
+        "sav_ecran": {
+          "titre": "Problème d’écran",
+          "texte": "L’ordinateur fonctionne mais son écran n’affiche pas correctement l’image : l’écran ou son éclairage est à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        },
+        "sav_systeme": {
+          "titre": "Le système ne démarre plus correctement",
+          "texte": "N’essayez pas de réinitialiser ou de réinstaller le système vous-même : vous pourriez perdre vos documents. L’équipe s’en occupe.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "23a25332895e59b34c736fc9f0d86af2"
+      ]
+    },
+    {
+      "identifiant": "charge",
+      "titre": "L’ordinateur ne se charge plus",
+      "description": "Chargeur, prise, réglages de charge et état de la batterie.",
+      "statut": "publie",
+      "symptomes": [
+        "L'appareil ne se charge plus",
+        "La batterie ne charge plus"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "prise",
+        "reveil",
+        "limite",
+        "limite_w",
+        "limite_l",
+        "autonomie",
+        "autonomie_w",
+        "autonomie_l",
+        "usure",
+        "gonfle",
+        "ok",
+        "sav",
+        "sav_chargeur"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Que constatez-vous ?",
+          "texte": "Branchez le chargeur sur une prise murale (pas une multiprise), puis sur l’ordinateur.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Rien : aucun voyant de charge, l’ordinateur ne voit pas le chargeur",
+              "cible": "prise"
+            },
+            {
+              "libelle": "Il est indiqué « branché, pas en charge » ou la charge s’arrête avant 100 %",
+              "cible": "limite"
+            },
+            {
+              "libelle": "Ça charge, mais la batterie se vide très vite",
+              "cible": "autonomie"
+            },
+            {
+              "libelle": "La coque est déformée ou le pavé tactile se soulève",
+              "cible": "gonfle"
+            }
+          ]
+        },
+        "prise": {
+          "titre": "Prise, câble et chargeur",
+          "texte": "1. Changez de prise murale et vérifiez qu’elle fonctionne (branchez une lampe).\n2. Si le chargeur est en deux parties (câble secteur + bloc), enfoncez bien le câble dans le bloc.\n3. Regardez le câble sur toute sa longueur : pli, fil visible, embout tordu ?\n4. Si la prise de l’ordinateur est en USB-C, essayez l’autre port USB-C s’il y en a un.",
+          "astuce": "N’utilisez jamais un câble dont le fil est visible ou qui chauffe fortement : risque d’incendie.",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’était la prise ou le câble mal enfoncé",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Le câble ou le chargeur est abîmé",
+              "cible": "sav_chargeur"
+            },
+            {
+              "libelle": "Tout semble normal, toujours pas de charge",
+              "cible": "reveil"
+            }
+          ]
+        },
+        "reveil": {
+          "titre": "Arrêt complet puis recharge",
+          "texte": "Débranchez le chargeur, éteignez l’ordinateur (ou maintenez le bouton d’alimentation 15 secondes s’il ne répond pas). Rebranchez le chargeur, attendez 2 minutes, puis rallumez.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "La charge a repris",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "sav"
+            }
+          ]
+        },
+        "limite": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "limite_w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "limite_l"
+            }
+          ]
+        },
+        "limite_w": {
+          "titre": "Mode de préservation de la batterie",
+          "texte": "Beaucoup d’ordinateurs arrêtent volontairement la charge vers 60 ou 80 % pour ménager la batterie : ce n’est pas une panne.\nCherchez dans le menu Démarrer l’application du fabricant (par exemple Lenovo Vantage, MyASUS, HP Support Assistant, Dell Power Manager) et regardez si un réglage du type « Mode conservation » ou « Limite de charge » est activé.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’était ce réglage",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Aucun réglage de ce type, la charge reste bloquée",
+              "cible": "sav"
+            }
+          ]
+        },
+        "limite_l": {
+          "titre": "Charge bloquée sous Linux Mint",
+          "texte": "Certains ordinateurs gardent en mémoire une limite de charge réglée par le fabricant (vers 60 ou 80 %), même sous Linux Mint : ce n’est pas une panne si la batterie s’arrête toujours au même niveau.\nLaissez l’ordinateur éteint et branché une heure, puis rallumez-le.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "La batterie se charge normalement",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Elle reste bloquée bas ou ne charge plus du tout",
+              "cible": "sav"
+            }
+          ]
+        },
+        "autonomie": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "autonomie_w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "autonomie_l"
+            }
+          ]
+        },
+        "autonomie_w": {
+          "titre": "Gagner de l’autonomie",
+          "texte": "1. Baissez la luminosité de l’écran.\n2. Ouvrez Paramètres → Système → Alimentation et batterie, et activez « Économiseur de batterie ».\n3. Fermez les applications inutiles, surtout un navigateur avec beaucoup d’onglets.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est nettement mieux",
+              "cible": "ok"
+            },
+            {
+              "libelle": "La batterie se vide toujours très vite",
+              "cible": "usure"
+            }
+          ]
+        },
+        "autonomie_l": {
+          "titre": "Gagner de l’autonomie",
+          "texte": "1. Baissez la luminosité de l’écran.\n2. Ouvrez Menu → Paramètres système → Gestion de l’alimentation et vérifiez les réglages sur batterie (mise en veille de l’écran).\n3. Fermez les applications inutiles, surtout un navigateur avec beaucoup d’onglets.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est nettement mieux",
+              "cible": "ok"
+            },
+            {
+              "libelle": "La batterie se vide toujours très vite",
+              "cible": "usure"
+            }
+          ]
+        },
+        "usure": {
+          "titre": "Batterie usée",
+          "texte": "La batterie s’use avec le temps et les recharges : l’autonomie diminue peu à peu. Branché sur le secteur, l’ordinateur reste utilisable normalement.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "batterie",
+          "reponses": []
+        },
+        "gonfle": {
+          "titre": "Batterie gonflée : arrêtez de l’utiliser",
+          "texte": "Une batterie gonflée peut prendre feu. Éteignez l’ordinateur, débranchez-le, ne le rechargez plus, ne le laissez pas sur un lit ou un canapé, n’appuyez pas dessus et n’essayez pas de l’ouvrir.\n\nContactez le SAV pour savoir comment le déposer ou l’envoyer en sécurité.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "batterie",
+          "reponses": []
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "La charge fonctionne à nouveau. Débranchez toujours le câble en tirant sur l’embout, pas sur le fil : c’est ce qui l’abîme le plus.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Il faut l’équipe SAV",
+          "texte": "Le problème vient du chargeur, du port de charge ou du circuit de charge : un diagnostic est nécessaire.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        },
+        "sav_chargeur": {
+          "titre": "Chargeur à remplacer",
+          "texte": "Le chargeur ou son câble est défectueux. Précisez « chargeur » au SAV.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "9868361f1319a8a499db0a38cc8c0fbd"
+      ]
+    },
+    {
+      "identifiant": "clavier",
+      "titre": "Le clavier ne fonctionne plus ou mal",
+      "description": "Touches inactives, chiffres qui ne s’écrivent pas, lettres inversées, liquide.",
+      "statut": "publie",
+      "symptomes": [
+        "Le clavier ne fonctionne plus ou mal",
+        "Mon clavier ne fonctionne pas",
+        "Le clavier ne répond plus"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "redemarrer",
+        "num",
+        "disposition",
+        "disp_w",
+        "disp_l",
+        "filtres",
+        "filtres_w",
+        "filtres_l",
+        "externe",
+        "liquide",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Que se passe-t-il ?",
+          "texte": "Ouvrez un endroit où écrire (un document ou la barre de recherche) et tapez quelques touches.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Aucune touche ne marche",
+              "cible": "redemarrer"
+            },
+            {
+              "libelle": "Les chiffres du pavé de droite ne s’écrivent pas",
+              "cible": "num"
+            },
+            {
+              "libelle": "Les lettres tapées ne sont pas les bonnes (A et Q inversés…)",
+              "cible": "disposition"
+            },
+            {
+              "libelle": "Il faut appuyer longtemps ou plusieurs fois sur les touches",
+              "cible": "filtres"
+            },
+            {
+              "libelle": "Seulement quelques touches ne marchent pas",
+              "cible": "externe"
+            },
+            {
+              "libelle": "Du liquide a été renversé sur le clavier",
+              "cible": "liquide"
+            }
+          ]
+        },
+        "redemarrer": {
+          "titre": "Redémarrer l’ordinateur",
+          "texte": "Redémarrez l’ordinateur avec la souris (menu Démarrer ou menu Linux Mint → Redémarrer).",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le clavier fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "externe"
+            }
+          ]
+        },
+        "num": {
+          "titre": "Touche Verr. Num",
+          "texte": "Appuyez une fois sur la touche « Verr. Num » (ou « Num Lock »), en haut du pavé numérique, puis réessayez. Sur certains portables, il faut la combiner avec la touche Fn.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Les chiffres s’écrivent",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "externe"
+            }
+          ]
+        },
+        "disposition": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "disp_w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "disp_l"
+            }
+          ]
+        },
+        "disp_w": {
+          "titre": "Langue du clavier",
+          "texte": "Regardez en bas à droite de l’écran, près de l’heure : il doit être écrit « FRA ». Sinon, cliquez dessus et choisissez « Français (France) ».\nLe raccourci touche Windows + Espace change aussi de clavier : il a pu être utilisé par erreur.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Les bonnes lettres s’écrivent",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "externe"
+            }
+          ]
+        },
+        "disp_l": {
+          "titre": "Langue du clavier",
+          "texte": "Ouvrez Menu → Paramètres système → Clavier → onglet « Dispositions » et vérifiez que « Français » est en haut de la liste.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Les bonnes lettres s’écrivent",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "externe"
+            }
+          ]
+        },
+        "filtres": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "filtres_w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "filtres_l"
+            }
+          ]
+        },
+        "filtres_w": {
+          "titre": "Touches filtres",
+          "texte": "Ouvrez Paramètres → Accessibilité → Clavier et désactivez « Touches filtres » (et « Touches rémanentes » si elles sont activées). Elles s’activent parfois en maintenant la touche Maj enfoncée 8 secondes.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le clavier réagit normalement",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "externe"
+            }
+          ]
+        },
+        "filtres_l": {
+          "titre": "Accessibilité du clavier",
+          "texte": "Ouvrez Menu → Paramètres système → Accessibilité → onglet « Clavier » et désactivez les options du type « touches lentes » ou « touches rémanentes ».",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le clavier réagit normalement",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "externe"
+            }
+          ]
+        },
+        "externe": {
+          "titre": "Tester un clavier USB (si possible)",
+          "texte": "Si vous avez un clavier USB, branchez-le. S’il fonctionne, c’est le clavier de l’ordinateur qui est en cause.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le clavier USB fonctionne",
+              "cible": "sav"
+            },
+            {
+              "libelle": "Pas de clavier USB, ou il ne fonctionne pas non plus",
+              "cible": "sav"
+            }
+          ]
+        },
+        "liquide": {
+          "titre": "Liquide renversé sur le clavier",
+          "texte": "Éteignez l’ordinateur tout de suite (maintenez le bouton d’alimentation si besoin), débranchez le chargeur, retournez-le en V clavier vers le bas sur un torchon. Ne le rallumez pas, ne le séchez pas au sèche-cheveux ni au four.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "liquide",
+          "reponses": []
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Clavier à vérifier",
+          "texte": "Le clavier intégré ou son branchement interne est probablement en cause.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "e3ef1f8780ab0500d2ccba8675ca70d3"
+      ]
+    },
+    {
+      "identifiant": "souris",
+      "titre": "La souris ou le pavé tactile ne fonctionne pas",
+      "description": "Pavé tactile désactivé, souris USB ou sans fil.",
+      "statut": "publie",
+      "symptomes": [
+        "Ma souris ne fonctionne pas"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "pave",
+        "pave_sys",
+        "pave_w",
+        "pave_l",
+        "usb",
+        "sansfil",
+        "redemarrer",
+        "souris_hs",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Qu’est-ce qui ne fonctionne pas ?",
+          "texte": "",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le pavé tactile de l’ordinateur portable",
+              "cible": "pave"
+            },
+            {
+              "libelle": "Une souris branchée en USB",
+              "cible": "usb"
+            },
+            {
+              "libelle": "Une souris sans fil",
+              "cible": "sansfil"
+            }
+          ]
+        },
+        "pave": {
+          "titre": "Le pavé tactile est peut-être désactivé",
+          "texte": "Beaucoup de portables ont une touche qui désactive le pavé tactile : cherchez sur les touches du haut (F1 à F12) un dessin de pavé barré, et appuyez dessus, parfois avec la touche Fn.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le pavé tactile fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Pas de touche de ce type, ou toujours rien",
+              "cible": "pave_sys"
+            }
+          ]
+        },
+        "pave_sys": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.\n\nAvec le pavé en panne, utilisez la touche Tab et les flèches du clavier, ou une souris USB.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "pave_w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "pave_l"
+            }
+          ]
+        },
+        "pave_w": {
+          "titre": "Réglage du pavé tactile",
+          "texte": "Ouvrez Paramètres → Bluetooth et appareils → Pavé tactile et vérifiez que le pavé tactile est activé.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Il fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Il était activé, toujours rien",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "pave_l": {
+          "titre": "Réglage du pavé tactile",
+          "texte": "Ouvrez Menu → Paramètres système → Souris et pavé tactile → onglet « Pavé tactile » et vérifiez qu’il est activé.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Il fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Il était activé, toujours rien",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "usb": {
+          "titre": "Souris USB",
+          "texte": "1. Branchez la souris sur un autre port USB.\n2. Si possible, essayez-la sur un autre ordinateur.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Elle marche sur un autre port",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Elle ne marche nulle part : c’est la souris",
+              "cible": "souris_hs"
+            },
+            {
+              "libelle": "Elle marche ailleurs, pas sur cet ordinateur",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "sansfil": {
+          "titre": "Souris sans fil",
+          "texte": "1. Vérifiez l’interrupteur sous la souris.\n2. Changez les piles ou rechargez-la.\n3. Branchez le petit récepteur USB sur un autre port, au plus près de la souris.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Elle fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "redemarrer": {
+          "titre": "Redémarrer l’ordinateur",
+          "texte": "Redémarrez l’ordinateur (au clavier : touche Windows ou menu, puis flèches et Entrée).",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "sav"
+            }
+          ]
+        },
+        "souris_hs": {
+          "titre": "La souris est en panne",
+          "texte": "Une souris qui ne marche sur aucun ordinateur est elle-même défectueuse. Si elle a été fournie avec l’ordinateur, contactez le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Pavé tactile ou ports USB à vérifier",
+          "texte": "Le pavé tactile ou les ports USB de l’ordinateur sont à examiner.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "2d405c2945c5fb67c41fbafc8e5d9359"
+      ]
+    },
+    {
+      "identifiant": "son",
+      "titre": "Pas de son ou plus de son",
+      "description": "Volume, sortie audio, casque.",
+      "statut": "publie",
+      "symptomes": [
+        "Je n'ai pas ou plus de son"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "casque",
+        "sortie",
+        "sortie_w",
+        "sortie_l",
+        "redemarrer",
+        "casque_test",
+        "ok",
+        "sav_hp",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Volume et sourdine",
+          "texte": "1. Appuyez sur la touche qui augmente le volume (haut-parleur), parfois avec la touche Fn.\n2. Vérifiez que l’icône de haut-parleur, en bas à droite, n’est pas barrée.\n3. Dans la vidéo ou le site qui joue le son, vérifiez aussi son propre volume.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le son est revenu",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas de son",
+              "cible": "casque"
+            }
+          ]
+        },
+        "casque": {
+          "titre": "Casque ou enceinte branchés ?",
+          "texte": "Si un casque, des écouteurs ou une enceinte sont branchés (câble ou Bluetooth), le son part peut-être vers eux. Débranchez-les ou éteignez le Bluetooth, puis réessayez.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le son sort des haut-parleurs",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas de son",
+              "cible": "sortie"
+            }
+          ]
+        },
+        "sortie": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "sortie_w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "sortie_l"
+            }
+          ]
+        },
+        "sortie_w": {
+          "titre": "Choisir la bonne sortie",
+          "texte": "Cliquez sur l’icône du haut-parleur dans la barre des tâches, puis sur la petite flèche à droite du curseur de volume : choisissez les haut-parleurs de l’ordinateur. Vous pouvez aussi passer par Paramètres → Système → Son → « Sortie ».",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le son est revenu",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas de son",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "sortie_l": {
+          "titre": "Choisir la bonne sortie",
+          "texte": "Ouvrez Menu → Paramètres système → Son → onglet « Sortie » : choisissez les haut-parleurs intégrés et vérifiez que le volume n’est pas à zéro ni coupé.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le son est revenu",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas de son",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "redemarrer": {
+          "titre": "Redémarrer l’ordinateur",
+          "texte": "Redémarrez l’ordinateur, puis testez le son avec une vidéo.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le son est revenu",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas de son",
+              "cible": "casque_test"
+            }
+          ]
+        },
+        "casque_test": {
+          "titre": "Tester avec un casque (si possible)",
+          "texte": "Branchez un casque ou des écouteurs filaires sur la prise jack.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Le son sort dans le casque, pas dans les haut-parleurs",
+              "cible": "sav_hp"
+            },
+            {
+              "libelle": "Pas de son non plus, ou pas de casque",
+              "cible": "sav"
+            }
+          ]
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav_hp": {
+          "titre": "Haut-parleurs à vérifier",
+          "texte": "Le son fonctionne au casque : ce sont les haut-parleurs de l’ordinateur qui sont en cause.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Il faut l’équipe SAV",
+          "texte": "La carte son ou ses réglages sont à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "71b4430a6eb47e7ce2c509c14ae67ac0"
+      ]
+    },
+    {
+      "identifiant": "internet",
+      "titre": "Impossible de se connecter à Internet",
+      "description": "Box, Wi-Fi, mode avion, mot de passe du réseau.",
+      "statut": "publie",
+      "symptomes": [
+        "Je n'arrive pas à me connecter à Internet",
+        "Wifi ne se connecte plus"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "box",
+        "operateur",
+        "sys",
+        "w_wifi",
+        "w_oublier",
+        "l_wifi",
+        "l_mdp",
+        "redemarrer",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Les autres appareils ont-ils Internet ?",
+          "texte": "Regardez si un téléphone connecté au même Wi-Fi (pas en 4G) accède à Internet.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Non, aucun appareil n’a Internet",
+              "cible": "box"
+            },
+            {
+              "libelle": "Oui, seul l’ordinateur n’y arrive pas",
+              "cible": "sys"
+            },
+            {
+              "libelle": "Je n’ai pas d’autre appareil pour vérifier",
+              "cible": "box"
+            }
+          ]
+        },
+        "box": {
+          "titre": "Redémarrer la box",
+          "texte": "Débranchez la box de la prise électrique, attendez 30 secondes, rebranchez-la, puis attendez que ses voyants soient stables (quelques minutes).",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Internet est revenu",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien sur aucun appareil",
+              "cible": "operateur"
+            },
+            {
+              "libelle": "Les autres appareils ont Internet, pas l’ordinateur",
+              "cible": "sys"
+            }
+          ]
+        },
+        "operateur": {
+          "titre": "Panne chez l’opérateur",
+          "texte": "Si aucun appareil n’a Internet après le redémarrage de la box, la panne vient de la box ou de la ligne : contactez votre opérateur (le numéro est sur votre facture ou votre espace client). Ce n’est pas une panne de l’ordinateur.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sys": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "w_wifi"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "l_wifi"
+            }
+          ]
+        },
+        "w_wifi": {
+          "titre": "Wi-Fi activé, mode Avion désactivé",
+          "texte": "Cliquez sur l’icône réseau en bas à droite : le Wi-Fi doit être activé et le mode Avion désactivé. Sur certains portables, une touche avec un dessin d’avion ou d’antenne (parfois avec Fn) coupe le Wi-Fi.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Mon réseau n’apparaît pas dans la liste",
+              "cible": "redemarrer"
+            },
+            {
+              "libelle": "Mon réseau apparaît mais la connexion échoue",
+              "cible": "w_oublier"
+            }
+          ]
+        },
+        "w_oublier": {
+          "titre": "Se reconnecter au réseau",
+          "texte": "Ouvrez Paramètres → Réseau et Internet → Wi-Fi → Gérer les réseaux connus, choisissez votre réseau, cliquez sur « Oublier », puis reconnectez-vous en tapant le mot de passe (la « clé » écrite sur l’étiquette de la box, en respectant majuscules et minuscules).",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "l_wifi": {
+          "titre": "Wi-Fi activé",
+          "texte": "Cliquez sur l’icône réseau en bas à droite : le Wi-Fi doit être activé et votre réseau sélectionné. Sur certains portables, une touche avec un dessin d’avion ou d’antenne (parfois avec Fn) coupe le Wi-Fi.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Mon réseau n’apparaît pas",
+              "cible": "redemarrer"
+            },
+            {
+              "libelle": "Mon réseau apparaît mais la connexion échoue",
+              "cible": "l_mdp"
+            }
+          ]
+        },
+        "l_mdp": {
+          "titre": "Retaper le mot de passe",
+          "texte": "Cliquez sur votre réseau dans la liste et retapez le mot de passe (la « clé » écrite sur l’étiquette de la box, en respectant majuscules et minuscules).",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "redemarrer": {
+          "titre": "Redémarrer l’ordinateur",
+          "texte": "Redémarrez l’ordinateur près de la box, puis reconnectez-vous.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "sav"
+            }
+          ]
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Connexion de l’ordinateur à vérifier",
+          "texte": "Les autres appareils ont Internet mais pas l’ordinateur : son Wi-Fi est à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "675d933e23cd9c3c304cfae28645c144"
+      ]
+    },
+    {
+      "identifiant": "virus",
+      "titre": "Virus, arnaques et fenêtres suspectes",
+      "description": "Les bons réflexes face à un message alarmant ou un comportement suspect.",
+      "statut": "publie",
+      "symptomes": [
+        "Mon appareil a des virus"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "arnaque",
+        "navigateur",
+        "analyse",
+        "analyse_w",
+        "analyse_l",
+        "hors",
+        "ok"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Que voyez-vous ?",
+          "texte": "",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Un message alarmant me demande d’appeler un numéro ou de payer",
+              "cible": "arnaque"
+            },
+            {
+              "libelle": "Des publicités ou fenêtres s’ouvrent dans le navigateur",
+              "cible": "navigateur"
+            },
+            {
+              "libelle": "Je pense avoir installé ou ouvert quelque chose de dangereux",
+              "cible": "analyse"
+            }
+          ]
+        },
+        "arnaque": {
+          "titre": "C’est une arnaque : n’appelez pas",
+          "texte": "Aucune entreprise sérieuse (Microsoft, votre banque, la police) ne bloque un ordinateur en vous demandant d’appeler un numéro ou de payer.\n1. N’appelez pas, ne payez rien, ne donnez aucun code ni mot de passe.\n2. Fermez le navigateur. S’il refuse de se fermer, redémarrez l’ordinateur.\n3. Si vous avez déjà donné des coordonnées bancaires, appelez tout de suite votre banque pour faire opposition.",
+          "astuce": "Signalez l’arnaque sur le site officiel cybermalveillance.gouv.fr, qui vous indique aussi quoi faire.",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Tout est redevenu normal",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Le message revient à chaque fois",
+              "cible": "hors"
+            },
+            {
+              "libelle": "J’ai laissé quelqu’un prendre le contrôle de l’ordinateur",
+              "cible": "hors"
+            }
+          ]
+        },
+        "navigateur": {
+          "titre": "Nettoyer le navigateur",
+          "texte": "1. Ne cliquez pas sur les fenêtres, fermez-les avec la croix.\n2. Si un site vous demande d’« Autoriser les notifications », refusez toujours.\n3. Fermez complètement le navigateur et rouvrez-le.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est réglé",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Les fenêtres reviennent",
+              "cible": "analyse"
+            }
+          ]
+        },
+        "analyse": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "analyse_w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "analyse_l"
+            }
+          ]
+        },
+        "analyse_w": {
+          "titre": "Analyse avec Sécurité Windows",
+          "texte": "Ouvrez le menu Démarrer, tapez « Sécurité Windows », ouvrez-la, puis « Protection contre les virus et menaces » → « Analyse rapide ». Si une menace est trouvée, suivez les actions proposées.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "L’analyse a réglé le problème",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Le problème continue",
+              "cible": "hors"
+            }
+          ]
+        },
+        "analyse_l": {
+          "titre": "Mettre à jour Linux Mint",
+          "texte": "Les virus sont très rares sous Linux Mint. Installez les mises à jour (icône en forme de bouclier en bas à droite, ou Menu → Gestionnaire de mises à jour → « Installer les mises à jour »), puis n’installez des logiciels que depuis la Logithèque.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est réglé",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Le problème continue",
+              "cible": "hors"
+            }
+          ]
+        },
+        "hors": {
+          "titre": "Virus ou arnaque",
+          "texte": "Si vos comptes ont pu être exposés, changez vos mots de passe depuis un autre appareil sûr. Le site officiel cybermalveillance.gouv.fr vous indique quoi faire et peut vous orienter vers un professionnel.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "virus",
+          "reponses": []
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Gardez les bons réflexes : ne rappelez jamais un numéro affiché dans une fenêtre, et n’installez que des logiciels connus.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "bf1ad8234b49b26bdd9fb2f05cf27647"
+      ]
+    },
+    {
+      "identifiant": "mises-a-jour",
+      "titre": "Le système ne se met pas à jour",
+      "description": "Lancer les mises à jour en toute sécurité.",
+      "statut": "publie",
+      "symptomes": [
+        "Mon système ne se met pas à jour"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "w",
+        "w_place",
+        "w_redemarrer",
+        "l",
+        "l_redemarrer",
+        "hors",
+        "ok"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Avant de commencer",
+          "texte": "Branchez l’ordinateur sur le secteur et vérifiez qu’il est connecté à Internet. Ne l’éteignez jamais pendant une mise à jour, même si elle paraît longue.",
+          "astuce": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "l"
+            }
+          ]
+        },
+        "w": {
+          "titre": "Windows Update",
+          "texte": "Ouvrez Paramètres → Windows Update → « Rechercher des mises à jour », puis laissez-les s’installer. Redémarrez quand Windows le demande.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Les mises à jour se sont installées",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Il manque de la place sur le disque",
+              "cible": "w_place"
+            },
+            {
+              "libelle": "Une mise à jour échoue toujours",
+              "cible": "w_redemarrer"
+            }
+          ]
+        },
+        "w_place": {
+          "titre": "Libérer de la place",
+          "texte": "Videz la Corbeille et déplacez photos et vidéos sur une clé USB ou un disque externe. Paramètres → Système → Stockage permet aussi de supprimer les fichiers temporaires.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "La mise à jour passe",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours bloquée",
+              "cible": "hors"
+            }
+          ]
+        },
+        "w_redemarrer": {
+          "titre": "Redémarrer puis réessayer",
+          "texte": "Redémarrez l’ordinateur (Démarrer → Marche/Arrêt → Redémarrer), puis relancez « Rechercher des mises à jour ».",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est passé",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours en échec",
+              "cible": "hors"
+            }
+          ]
+        },
+        "l": {
+          "titre": "Gestionnaire de mises à jour",
+          "texte": "Cliquez sur l’icône en forme de bouclier en bas à droite (ou Menu → Gestionnaire de mises à jour), puis « Actualiser » et « Installer les mises à jour ». Tapez votre mot de passe si on vous le demande.",
+          "astuce": "Ne choisissez pas vous-même d’autres versions du noyau (« kernel ») ou des pilotes : laissez les réglages proposés par Linux Mint.",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Les mises à jour se sont installées",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Un message d’erreur s’affiche",
+              "cible": "l_redemarrer"
+            }
+          ]
+        },
+        "l_redemarrer": {
+          "titre": "Redémarrer puis réessayer",
+          "texte": "Redémarrez l’ordinateur, vérifiez la connexion Internet, puis relancez le Gestionnaire de mises à jour.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est passé",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours en échec",
+              "cible": "hors"
+            }
+          ]
+        },
+        "hors": {
+          "titre": "Mise à jour bloquée",
+          "texte": "Notez le message d’erreur exact (ou prenez-le en photo) : il sera utile si vous contactez le SAV. N’éteignez jamais l’ordinateur pendant une mise à jour.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "mises-a-jour",
+          "reponses": []
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Les mises à jour sont installées. Faites-les régulièrement : elles protègent l’ordinateur.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "f372ddf811bbeebc8cbe282ba4d542ca"
+      ]
+    },
+    {
+      "identifiant": "lenteur",
+      "titre": "L’ordinateur est très lent",
+      "description": "Applications ouvertes, place sur le disque, redémarrage.",
+      "statut": "publie",
+      "symptomes": [
+        "Mon appareil est très lent",
+        "Très lent, presque inutilisable"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "sys",
+        "w",
+        "l",
+        "place",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Redémarrer l’ordinateur",
+          "texte": "Un ordinateur qui n’est jamais éteint ralentit. Redémarrez-le (Redémarrer, pas seulement fermer le capot).",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est plus rapide",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours lent",
+              "cible": "sys"
+            }
+          ]
+        },
+        "sys": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "l"
+            }
+          ]
+        },
+        "w": {
+          "titre": "Ce qui occupe l’ordinateur",
+          "texte": "1. Fermez les applications inutiles et les onglets du navigateur.\n2. Ouvrez le Gestionnaire des tâches (touches Ctrl + Maj + Échap) : regardez quelle application utilise le plus « Processeur » ou « Mémoire ».\n3. Vérifiez la place libre : Paramètres → Système → Stockage.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est mieux",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Le disque est presque plein",
+              "cible": "place"
+            },
+            {
+              "libelle": "Toujours lent sans raison visible",
+              "cible": "sav"
+            }
+          ]
+        },
+        "l": {
+          "titre": "Ce qui occupe l’ordinateur",
+          "texte": "1. Fermez les applications inutiles et les onglets du navigateur.\n2. Ouvrez Menu → « Moniteur système » : regardez quelle application utilise le plus le processeur ou la mémoire.\n3. Vérifiez la place libre dans l’onglet « Systèmes de fichiers » du Moniteur système.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est mieux",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Le disque est presque plein",
+              "cible": "place"
+            },
+            {
+              "libelle": "Toujours lent sans raison visible",
+              "cible": "sav"
+            }
+          ]
+        },
+        "place": {
+          "titre": "Libérer de la place",
+          "texte": "Videz la Corbeille et déplacez photos et vidéos sur une clé USB ou un disque externe. Gardez au moins 10 % du disque libre.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est mieux",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours lent",
+              "cible": "sav"
+            }
+          ]
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Lenteur à diagnostiquer",
+          "texte": "L’ordinateur reste lent après ces vérifications : le disque ou un autre composant est peut-être en cause.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "4e76cc902df018739b36daf1c0c781df"
+      ]
+    },
+    {
+      "identifiant": "chaleur-bruit",
+      "titre": "L’ordinateur chauffe ou fait du bruit",
+      "description": "Aération, usage, bruits anormaux.",
+      "statut": "publie",
+      "symptomes": [
+        "Mon appareil chauffe ou fait du bruit",
+        "L'appareil chauffe énormément"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "aeration",
+        "bruit",
+        "danger",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Que constatez-vous ?",
+          "texte": "",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Il chauffe et le ventilateur souffle fort",
+              "cible": "aeration"
+            },
+            {
+              "libelle": "Un bruit de frottement, de cliquetis ou de grincement",
+              "cible": "bruit"
+            },
+            {
+              "libelle": "Une odeur de brûlé ou de la fumée",
+              "cible": "danger"
+            }
+          ]
+        },
+        "aeration": {
+          "titre": "Laisser respirer l’ordinateur",
+          "texte": "1. Posez-le sur une table dure, jamais sur un lit, un canapé ou les genoux couverts d’une couverture.\n2. Vérifiez que les grilles d’aération (dessous et côtés) ne sont ni bouchées ni couvertes de poussière visible.\n3. Fermez les applications et onglets inutiles : une vidéo ou un jeu font chauffer normalement.",
+          "astuce": "N’ouvrez pas l’ordinateur et n’utilisez pas d’aspirateur sur les grilles : vous risquez d’abîmer le ventilateur.",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est redevenu normal",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Il chauffe fort même sans rien faire",
+              "cible": "sav"
+            }
+          ]
+        },
+        "bruit": {
+          "titre": "Bruit anormal",
+          "texte": "Un bruit de frottement ou de cliquetis vient souvent du ventilateur ou du disque. Enregistrez vos documents importants sur une clé USB dès que possible.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Compris",
+              "cible": "sav"
+            }
+          ]
+        },
+        "danger": {
+          "titre": "Odeur de brûlé : danger",
+          "texte": "Éteignez l’ordinateur tout de suite, débranchez le chargeur et ne le rallumez pas.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est fait",
+              "cible": "sav"
+            }
+          ]
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Ordinateur à examiner",
+          "texte": "La ventilation ou un composant est à vérifier.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "51c23ef3b0f635c1f367d68dd056920e"
+      ]
+    },
+    {
+      "identifiant": "ecran-casse",
+      "titre": "Écran cassé ou fissuré",
+      "description": "Écran abîmé à la réception ou après un choc.",
+      "statut": "publie",
+      "symptomes": [
+        "L'écran est cassé ou fissuré"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "reception",
+        "lignes",
+        "choc"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Quand l’écran a-t-il été abîmé ?",
+          "texte": "",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Il était déjà cassé quand j’ai reçu l’ordinateur",
+              "cible": "reception"
+            },
+            {
+              "libelle": "Après une chute, un choc ou une pression (objet laissé sur le clavier, capot fermé sur un objet)",
+              "cible": "choc"
+            },
+            {
+              "libelle": "Des lignes ou des taches sont apparues sans choc",
+              "cible": "lignes"
+            }
+          ]
+        },
+        "reception": {
+          "titre": "Écran abîmé à la réception",
+          "texte": "Contactez le SAV rapidement en précisant que l’écran était cassé dès la réception, avec une photo si possible.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        },
+        "lignes": {
+          "titre": "Lignes ou taches sans choc",
+          "texte": "Si vous êtes sûr qu’il n’y a eu ni chute ni pression, contactez le SAV en décrivant ce qui s’affiche (une photo aide beaucoup).",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        },
+        "choc": {
+          "titre": "Écran abîmé par un choc",
+          "texte": "En attendant, n’appuyez pas sur l’écran et évitez de vous couper avec des éclats. Enregistrez vos documents sur une clé USB si l’ordinateur fonctionne encore.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "chute",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "5d14040220514b6a074e4a35ba6097f7"
+      ]
+    },
+    {
+      "identifiant": "mot-de-passe",
+      "titre": "Mot de passe oublié ou compte inaccessible",
+      "description": "Retrouver l’accès à la session de l’ordinateur.",
+      "statut": "publie",
+      "symptomes": [
+        "J'ai oublié mon mot de passe ou je ne peux plus accéder à mon compte"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "site",
+        "sys",
+        "w",
+        "w_maj",
+        "w_ms",
+        "w_local",
+        "l",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Quel mot de passe ?",
+          "texte": "",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Celui pour ouvrir la session de l’ordinateur",
+              "cible": "sys"
+            },
+            {
+              "libelle": "Celui d’un site ou d’une application (messagerie, CAF, banque…)",
+              "cible": "site"
+            }
+          ]
+        },
+        "site": {
+          "titre": "Mot de passe d’un site",
+          "texte": "Sur la page de connexion du site, utilisez le lien « Mot de passe oublié ? » : un lien de réinitialisation vous est envoyé par e-mail ou SMS. Le SAV n’a pas accès à vos comptes en ligne.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sys": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "l"
+            }
+          ]
+        },
+        "w": {
+          "titre": "Vérifications sous Windows",
+          "texte": "1. Vérifiez la touche Verr. Maj (majuscules) et la langue du clavier affichée sur l’écran de connexion.\n2. Si la session demande un code PIN, tapez le code à chiffres, pas le mot de passe.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "L’ordinateur demande un mot de passe depuis une mise à jour",
+              "cible": "w_maj"
+            },
+            {
+              "libelle": "C’est un compte Microsoft (une adresse e-mail s’affiche)",
+              "cible": "w_ms"
+            },
+            {
+              "libelle": "C’est un compte sans adresse e-mail",
+              "cible": "w_local"
+            }
+          ]
+        },
+        "w_ms": {
+          "titre": "Réinitialiser un compte Microsoft",
+          "texte": "Sur l’écran de connexion, cliquez sur « J’ai oublié mon mot de passe » (ou « J’ai oublié mon code PIN ») et suivez les étapes : un code est envoyé par e-mail ou SMS. Depuis un autre appareil, la page officielle est account.live.com/password/reset.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "J’ai retrouvé l’accès",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Je n’ai plus accès à l’e-mail ni au téléphone",
+              "cible": "sav"
+            }
+          ]
+        },
+        "w_local": {
+          "titre": "Compte local",
+          "texte": "Après un mot de passe erroné, un lien « Réinitialiser le mot de passe » peut apparaître : il pose les questions de sécurité choisies à l’installation.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "J’ai retrouvé l’accès",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Pas de lien ou je ne connais pas les réponses",
+              "cible": "sav"
+            }
+          ]
+        },
+        "l": {
+          "titre": "Vérifications sous Linux Mint",
+          "texte": "Essayez d’abord le mot de passe « emmaus » (tout en minuscules, sans accent) : c’est souvent celui des ordinateurs reconditionnés par Emmaüs Connect.\nVérifiez aussi la touche Verr. Maj (majuscules) et la langue du clavier, puis retapez le mot de passe lentement.\nSous Linux Mint, un mot de passe oublié ne se réinitialise pas sans manipulation technique : ne tentez rien d’autre, l’équipe s’en charge.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours refusé",
+              "cible": "sav"
+            }
+          ]
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "L’équipe vous aide à retrouver l’accès",
+          "texte": "Préparez une pièce justifiant que l’ordinateur vous a bien été remis : l’équipe pourra vous la demander.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        },
+        "w_maj": {
+          "titre": "Mot de passe demandé après une mise à jour",
+          "texte": "Après une mise à jour, Windows 11 demande souvent de créer ou de saisir un mot de passe (ou un code PIN), même si l’ordinateur n’en avait pas.\nSi aucun mot de passe n’était demandé avant : laissez les cases vides et cliquez sur « Continuer » (ou « Suivant ») à chaque étape. Vous pouvez aussi appuyer 3 fois de suite sur la touche Entrée.",
+          "astuce": "Ne choisissez pas un nouveau mot de passe au hasard : vous risqueriez de ne plus pouvoir ouvrir la session.",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "J’ai retrouvé l’accès",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Ça ne passe toujours pas",
+              "cible": "sav"
+            }
+          ]
+        }
+      },
+      "empreintesPrecedentes": [
+        "08adbb89d35cd333d9f7795d07b75205",
+        "49472dc06305045f72949a1e88e1a2c9"
+      ]
+    },
+    {
+      "identifiant": "camera-micro",
+      "titre": "La caméra ou le micro ne fonctionne pas",
+      "description": "Cache, autorisations, réglages de l’application.",
+      "statut": "publie",
+      "symptomes": [
+        "La caméra ou le micro ne fonctionne pas"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "appli",
+        "sys",
+        "w",
+        "l",
+        "redemarrer",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Cache et touche de coupure",
+          "texte": "1. Certains portables ont un petit cache coulissant devant la caméra : ouvrez-le.\n2. Cherchez une touche avec une caméra ou un micro barré (parfois avec Fn) et appuyez dessus.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "appli"
+            }
+          ]
+        },
+        "appli": {
+          "titre": "Réglages de l’application",
+          "texte": "Dans l’application de visio (Teams, Zoom, WhatsApp Web, navigateur…), ouvrez les paramètres audio et vidéo et choisissez la caméra et le micro de l’ordinateur. Si le navigateur demande l’autorisation d’utiliser la caméra ou le micro, acceptez.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "sys"
+            }
+          ]
+        },
+        "sys": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "l"
+            }
+          ]
+        },
+        "w": {
+          "titre": "Autorisations de Windows",
+          "texte": "Ouvrez Paramètres → Confidentialité et sécurité → Caméra (puis → Microphone) : « Accès à la caméra » et l’accès pour les applications doivent être activés.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "l": {
+          "titre": "Réglages du micro sous Linux Mint",
+          "texte": "Pour le micro : Menu → Paramètres système → Son → onglet « Entrée », choisissez le micro intégré et vérifiez qu’il n’est pas coupé.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "redemarrer": {
+          "titre": "Redémarrer l’ordinateur",
+          "texte": "Fermez toutes les applications de visio, redémarrez l’ordinateur et réessayez.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "sav"
+            }
+          ]
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Caméra ou micro à vérifier",
+          "texte": "Le matériel ou son branchement interne est probablement en cause.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "cf1a5de37334055b7609629db5f4e6bb"
+      ]
+    },
+    {
+      "identifiant": "ports",
+      "titre": "Un port (USB, charge, HDMI…) ne fonctionne plus",
+      "description": "Tester l’accessoire, le câble et les autres ports.",
+      "statut": "publie",
+      "symptomes": [
+        "Un port (USB, charge) ne fonctionne plus"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "tester",
+        "redemarrer",
+        "accessoire",
+        "choc",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Le port est-il abîmé ?",
+          "texte": "Regardez le port avec une lampe.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Il est tordu, cassé ou abîmé après un choc ou un arrachement",
+              "cible": "choc"
+            },
+            {
+              "libelle": "Il paraît normal",
+              "cible": "tester"
+            }
+          ]
+        },
+        "tester": {
+          "titre": "Tester l’accessoire et le câble",
+          "texte": "1. Branchez l’accessoire sur un autre port de l’ordinateur.\n2. Si possible, essayez-le sur un autre ordinateur, et essayez un autre câble.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "L’accessoire ne marche nulle part : c’est lui",
+              "cible": "accessoire"
+            },
+            {
+              "libelle": "Il marche sur un autre port",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Il marche ailleurs, pas sur ce port",
+              "cible": "redemarrer"
+            }
+          ]
+        },
+        "redemarrer": {
+          "titre": "Redémarrer l’ordinateur",
+          "texte": "Redémarrez l’ordinateur, puis rebranchez l’accessoire sur ce port.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "sav"
+            }
+          ]
+        },
+        "accessoire": {
+          "titre": "L’accessoire est en cause",
+          "texte": "L’ordinateur n’est pas en cause : c’est l’accessoire ou son câble qui ne fonctionne pas.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "choc": {
+          "titre": "Port abîmé par un choc",
+          "texte": "Un port tordu ou arraché vient d’un choc ou d’un câble tiré. N’y branchez plus rien pour ne pas l’abîmer davantage.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "chute",
+          "reponses": []
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Port à vérifier",
+          "texte": "Le port de l’ordinateur ne fonctionne plus et doit être examiné.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "3967b939fef34f6d1dcb62143bf77824"
+      ]
+    },
+    {
+      "identifiant": "application",
+      "titre": "Une application ne fonctionne pas",
+      "description": "Redémarrer, mettre à jour, réinstaller depuis la source officielle.",
+      "statut": "publie",
+      "symptomes": [
+        "Une application ne fonctionne pas"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "sys",
+        "w",
+        "l",
+        "hors",
+        "ok"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Fermer et rouvrir",
+          "texte": "Fermez complètement l’application, puis rouvrez-la. Si elle ne répond plus, redémarrez l’ordinateur.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Elle fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "sys"
+            }
+          ]
+        },
+        "sys": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "l"
+            }
+          ]
+        },
+        "w": {
+          "titre": "Mettre à jour",
+          "texte": "Lancez Windows Update (Paramètres → Windows Update → Rechercher des mises à jour) et, si l’application vient du Microsoft Store, ouvrez le Store → Bibliothèque → « Obtenir les mises à jour ».",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Elle fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "hors"
+            }
+          ]
+        },
+        "l": {
+          "titre": "Mettre à jour",
+          "texte": "Installez les mises à jour avec le Gestionnaire de mises à jour (icône bouclier en bas à droite). Si l’application vient de la Logithèque, vérifiez qu’elle y est à jour.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Elle fonctionne",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours pas",
+              "cible": "hors"
+            }
+          ]
+        },
+        "hors": {
+          "titre": "Application en panne",
+          "texte": "Le site de l’éditeur de l’application propose souvent une aide. N’installez jamais une application depuis un site inconnu.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "application",
+          "reponses": []
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "e70aba65925e401ec3a678ebdc25be31"
+      ]
+    },
+    {
+      "identifiant": "chute-liquide",
+      "titre": "Ordinateur tombé ou ayant pris l’eau",
+      "description": "Les bons gestes tout de suite, puis la marche à suivre.",
+      "statut": "publie",
+      "symptomes": [
+        "Mon appareil est tombé ou a pris l'eau",
+        "Casse suite à une chute"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "liquide",
+        "liquide_hors",
+        "chute"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Que s’est-il passé ?",
+          "texte": "",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Il est tombé ou a reçu un choc",
+              "cible": "chute"
+            },
+            {
+              "libelle": "Un liquide a été renversé dessus",
+              "cible": "liquide"
+            }
+          ]
+        },
+        "liquide": {
+          "titre": "Les bons gestes tout de suite",
+          "texte": "1. Éteignez-le immédiatement (maintenez le bouton d’alimentation si besoin) et débranchez le chargeur.\n2. Retirez clés USB et accessoires.\n3. Retournez-le, ouvert en V, clavier vers le bas, sur un torchon.\n4. Ne le rallumez pas pour « tester », ne le séchez pas au sèche-cheveux, au four ni au soleil, ne le mettez pas dans le riz.",
+          "astuce": "Rallumer un ordinateur mouillé peut provoquer un court-circuit définitif.",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est fait",
+              "cible": "liquide_hors"
+            }
+          ]
+        },
+        "liquide_hors": {
+          "titre": "Liquide renversé",
+          "texte": "Gardez l’ordinateur éteint et débranché.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "liquide",
+          "reponses": []
+        },
+        "chute": {
+          "titre": "Chute ou choc",
+          "texte": "S’il fonctionne encore, enregistrez vos documents importants sur une clé USB. S’il sent le brûlé ou si la coque est déformée, ne le rallumez pas.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "chute",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "c4c54f4eef9e4c57643142aa68c6cec6"
+      ]
+    },
+    {
+      "identifiant": "impression",
+      "titre": "Impossible d’imprimer",
+      "description": "Imprimante allumée, connectée, choisie.",
+      "statut": "publie",
+      "symptomes": [
+        "Je n'arrive pas à imprimer"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "sys",
+        "w",
+        "l",
+        "fabricant",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "L’imprimante",
+          "texte": "1. Vérifiez qu’elle est allumée, qu’elle a du papier et de l’encre, et qu’aucun voyant d’erreur ne clignote.\n2. Éteignez-la et rallumez-la.\n3. Vérifiez son câble USB, ou qu’elle est connectée au même Wi-Fi que l’ordinateur.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça imprime",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Toujours rien",
+              "cible": "sys"
+            }
+          ]
+        },
+        "sys": {
+          "titre": "Quel système est installé ?",
+          "texte": "Windows 11 : le bouton Démarrer (logo à 4 carrés) est en bas, au centre de l’écran.\nLinux Mint : le menu (logo vert « lm ») est en bas à gauche.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Windows 11",
+              "cible": "w"
+            },
+            {
+              "libelle": "Linux Mint",
+              "cible": "l"
+            }
+          ]
+        },
+        "w": {
+          "titre": "L’imprimante dans Windows",
+          "texte": "Ouvrez Paramètres → Bluetooth et appareils → Imprimantes et scanners : votre imprimante doit apparaître. Sinon, cliquez sur « Ajouter un appareil ».",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça imprime",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Elle n’apparaît pas ou n’imprime toujours pas",
+              "cible": "fabricant"
+            }
+          ]
+        },
+        "l": {
+          "titre": "L’imprimante dans Linux Mint",
+          "texte": "Ouvrez Menu → Paramètres système → Imprimantes : votre imprimante doit apparaître. Sinon, cliquez sur « Ajouter ».",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça imprime",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Elle n’apparaît pas ou n’imprime toujours pas",
+              "cible": "fabricant"
+            }
+          ]
+        },
+        "fabricant": {
+          "titre": "Aide du fabricant de l’imprimante",
+          "texte": "Le fabricant de l’imprimante (HP, Canon, Epson, Brother…) propose sur son site une aide et, pour Windows, son logiciel d’installation. Si une autre machine imprime bien sur la même imprimante, l’ordinateur est peut-être en cause.",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Ça imprime",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Les autres appareils impriment, pas cet ordinateur",
+              "cible": "sav"
+            }
+          ]
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Impression à vérifier",
+          "texte": "L’imprimante fonctionne avec d’autres appareils mais pas avec cet ordinateur.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "fd1516225314f8f407c660eb13cfdd2f"
+      ]
+    },
+    {
+      "identifiant": "autre",
+      "titre": "Autre problème",
+      "description": "Quelques vérifications générales avant de décrire la panne.",
+      "statut": "publie",
+      "symptomes": [
+        "Autre problème"
+      ],
+      "depart": "depart",
+      "ordre": [
+        "depart",
+        "cause",
+        "chute",
+        "liquide",
+        "ok",
+        "sav"
+      ],
+      "etapes": {
+        "depart": {
+          "titre": "Redémarrer l’ordinateur",
+          "texte": "Beaucoup de problèmes disparaissent après un vrai redémarrage (Redémarrer, pas seulement fermer le capot).",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "C’est réglé",
+              "cible": "ok"
+            },
+            {
+              "libelle": "Le problème continue",
+              "cible": "cause"
+            }
+          ]
+        },
+        "cause": {
+          "titre": "Le problème vient-il d’un accident ?",
+          "texte": "",
+          "astuce": "",
+          "media": null,
+          "fin": "",
+          "reponses": [
+            {
+              "libelle": "Non, il est apparu sans raison",
+              "cible": "sav"
+            },
+            {
+              "libelle": "Il est apparu après une chute ou un choc",
+              "cible": "chute"
+            },
+            {
+              "libelle": "Un liquide a été renversé dessus",
+              "cible": "liquide"
+            }
+          ]
+        },
+        "chute": {
+          "titre": "Chute ou choc",
+          "texte": "S’il fonctionne encore, enregistrez vos documents importants sur une clé USB. S’il sent le brûlé ou si la coque est déformée, ne le rallumez pas.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "chute",
+          "reponses": []
+        },
+        "liquide": {
+          "titre": "Liquide renversé",
+          "texte": "Éteignez l’ordinateur, débranchez-le et ne le rallumez pas. Ne le séchez pas au sèche-cheveux, au four ni au soleil.",
+          "astuce": "",
+          "media": null,
+          "fin": "hors",
+          "motif": "liquide",
+          "reponses": []
+        },
+        "ok": {
+          "titre": "Problème réglé",
+          "texte": "Tant mieux. Si le problème revient, vous pourrez refaire ce parcours ou contacter le SAV.",
+          "astuce": "",
+          "media": null,
+          "fin": "resolu",
+          "reponses": []
+        },
+        "sav": {
+          "titre": "Décrivez la panne",
+          "texte": "Décrivez précisément ce qui se passe et depuis quand : un message d’erreur ou une photo aident beaucoup.\n\nQuand vous contacterez le SAV, indiquez ce que vous avez déjà essayé : l’équipe gagnera du temps.",
+          "astuce": "",
+          "media": null,
+          "fin": "sav",
+          "reponses": []
+        }
+      },
+      "empreintesPrecedentes": [
+        "bad88f904e5055fbf0e0967894477440"
+      ]
+    }
+  ]
+}
