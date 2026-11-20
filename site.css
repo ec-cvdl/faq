@@ -1,5 +1,9 @@
 /* Compléments propres au site autonome (le reste vient de design/, importé de La Distrib). */
 [hidden] { display: none !important; }
+/* Colonne centrée, même largeur que le panneau Dépannage du portail structure (860 px). */
+main { max-width: 860px; margin: 0 auto; padding: var(--space-8) var(--space-6) 64px; }
+.etape-carte { margin: 0 auto; }
+@media (max-width: 520px) { main { padding: var(--space-6) var(--space-4); } }
 .site-sous-titre { opacity: 0.6; margin: 0 0 var(--space-5); }
 .site-sous-titre:empty { display: none; }
 .site-grille { padding: var(--space-8) var(--space-6); margin-bottom: var(--space-4); }
